@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Cozy Library</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>📚 My Cozy Library</h1>
+
+  <div class="bookshelf" id="bookshelf"></div>
+
+  <div class="info-panel" id="infoPanel">
+    <span class="close" onclick="closeInfo()">×</span>
+    <h2 id="bookTitle"></h2>
+    <p><strong>Author:</strong> <span id="bookAuthor"></span></p>
+    <p><strong>Year:</strong> <span id="bookYear"></span></p>
+    <p><strong>Genre:</strong> <span id="bookGenre"></span></p>
+    <p><strong>Description:</strong></p>
+    <p id="bookDesc"></p>
+  </div>
+
+  <img src="plant.png" class="plant" />
+  <img src="cat.png" class="cat" />
+
+  <script src="books.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

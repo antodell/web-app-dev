@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Bookshelf</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <h1>My bookshelf</h1>
+
+  <p class="intro">Welcome to your personal library! Click any book spine to explore its story. You can customize the bookshelf to your liking. 🪴📚</p>
+
+  <div class="stats-box">
+    <p><strong>Total Books:</strong> <span id="bookCount">0</span></p>
+    <p><strong>Genres:</strong> <span id="genreCount">0</span></p>
+  </div>  
+
+  <div class="bookshelf" id="bookshelf"></div>
+
+  <div class="info-panel" id="infoPanel">
+    <span class="close" onclick="closeInfo()">×</span>
+    <h2 id="bookTitle"></h2>
+    <p><strong>Author:</strong> <span id="bookAuthor"></span></p>
+    <p><strong>Year:</strong> <span id="bookYear"></span></p>
+    <p><strong>Genre:</strong> <span id="bookGenre"></span></p>
+    <p><strong>Description:</strong></p>
+    <p id="bookDesc"></p>
+  </div>
+
+  <div class="table-wrapper" style="display: none;">
+    <h2>📖 Selected Book</h2>
+    <table id="bookTable">
+      <thead>
+        <tr><th>Title</th><th>Author</th><th>Year</th><th>Genre</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>  
+
+  <h2>📚 Add a New Book</h2>
+  <form id="addForm">
+    <input id="addTitle" placeholder="Title" required />
+    <input id="addAuthor" placeholder="Author" required />
+    <input id="addYear" type="number" placeholder="Year" required />
+    <input id="addGenre" placeholder="Genre" required />
+    <input id="addDesc" placeholder="Description" required />
+    <button type="submit">Add Book</button>
+  </form>
+
+  <div class="form-section">
+    <h2>📋 Update a Book</h2>
+    <form id="updateForm">
+      <input id="updateTitle" placeholder="Title to update" required />
+      <input id="newAuthor" placeholder="New Author" required />
+      <input id="newYear" type="number" placeholder="New Year" required />
+      <input id="newGenre" placeholder="New Genre" required />
+      <button type="submit">Update</button>
+    </form>
+
+    <h2>🗑️ Remove a Book</h2>
+    <form id="removeForm">
+      <input id="removeTitle" placeholder="Title to remove" required />
+      <button type="submit">Remove</button>
+    </form>
+
+    <div id="error" class="error"></div>
+  </div>
+
+  <img src="books.png" width:100px height:80px class="books" />
+
+  <script src="books_v2.js"></script>
+  <script src="script.js"></script>
+
+  <footer>Made by Antonella · 2025</footer>
+
+</body>
+</html>
